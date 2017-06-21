@@ -61,6 +61,10 @@ func (r *retag) getStructTags(filename string) {
 			break
 		}
 
+		if len(line) == 0 {
+			continue
+		}
+
 		if strings.HasPrefix(strings.TrimSpace(string(line)), "/*") {
 			comment = true
 		}
